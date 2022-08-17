@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/style.css" />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        margin-block: 2rem;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img src="/images/logo.svg" alt="logo" />
+      </div>
+      <div class="header__menu">
+        <img src="/images/icon-menu.svg" alt="open menu" id="menu-btn" />
+        <img src="/images/icon-close-menu.svg" alt="close" id="close-btn" />
+      </div>
+      <div class="header__navmenu">
+        <div class="left-menu">
+          <ul>
+            <li>
+              <input
+                type="checkbox"
+                id="features"
+                name="head-titles"
+                onclick="onlyOne(this)"
+              />
+              <label for="features">
+                Features
+                <img src="/images/icon-arrow-down.svg" alt="down arrow" />
+              </label>
+              <div class="sub-menu">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <img src="/images/icon-todo.svg" alt="todo list" />
+                      <span>Todo list</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="/images/icon-calendar.svg" alt="calendar" />
+                      <span>Calendar</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="/images/icon-reminders.svg" alt="reminders" />
+                      <span class="reminders">Reminders</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="/images/icon-planning.svg" alt="planning" />
+                      <span>Planning</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                name="head-titles"
+                id="company"
+                onclick="onlyOne(this)"
+              />
+              <label for="company"
+                >Company <img src="/images/icon-arrow-down.svg" alt="" />
+              </label>
+              <div class="sub-menu">
+                <ul>
+                  <li>
+                    <a href="#"><span>History</span></a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span>Our team</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span>Blog</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+          </ul>
+        </div>
+        <div class="right-menu">
+          <a class="login" href="#">Login</a>
+          <a class="register button" href="#">Register</a>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero__leftcontent">
+        <h1 class="titleDesktop">
+          Make <br />
+          remote work
+        </h1>
+        <h1 class="titleMobile">Make remote work</h1>
+        <p>
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <a href="#">Learn more</a>
+        <div class="hero__clients">
+          <img src="/images/client-databiz.svg" alt="databiz" />
+          <img src="/images/client-audiophile.svg" alt="audiophile" />
+          <img src="/images/client-meet.svg" alt="meet" />
+          <img src="/images/client-maker.svg" alt="maker" />
+        </div>
+      </div>
+      <div class="hero__rightcontent">
+        <img
+          src="/images/image-hero-desktop.png"
+          id="desktop-design-img"
+          alt="hero image"
+        />
+        <img
+          src="/images/image-hero-mobile.png"
+          id="mobile-design-img"
+          alt="hero image"
+        />
+      </div>
+    </section>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

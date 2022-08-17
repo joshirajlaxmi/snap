@@ -1,0 +1,130 @@
+.hero {
+  padding-inline: 10rem;
+  padding: 6rem 10.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50vh;
+  @include breakpoint-down(medium) {
+    flex-direction: column-reverse;
+    padding-inline: 0;
+    text-align: center;
+  }
+  #mobile-design-img {
+    display: none;
+    @include breakpoint-down(medium) {
+      display: block;
+      max-width: 100vw;
+    }
+  }
+  #desktop-design-img {
+    width: 30.3125rem;
+    height: 32.5625rem;
+    @include breakpoint-down(medium) {
+      display: none;
+    }
+  }
+  &__leftcontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 82vh;
+    margin-top: 10vh;
+    gap: 5vh;
+    @include breakpoint-down(medium) {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-inline: 3vw;
+      width: 100vw;
+      margin-top: 2vh;
+      gap: 1vh;
+      text-align: center;
+    }
+    .titleDesktop {
+      margin: 0;
+      font-size: 3.75rem;
+      color: $almostBlack;
+      line-height: 1.02;
+      //margin-top: -40px;
+      width: 80%;
+      @include breakpoint-down(medium) {
+        display: none;
+      }
+    }
+    .titleMobile {
+      @include breakpoint-up(large) {
+        display: none;
+      }
+      color: $almostBlack;
+      line-height: 1.02;
+      width: 100%;
+      font-size: 2.3rem;
+    }
+    p {
+      width: 85%;
+      line-height: 1.3;
+      font-size: 1.15rem;
+      color: $mediumGray;
+      @include breakpoint-down(medium) {
+        width: 100%;
+        margin-bottom: 1.2rem;
+      }
+    }
+    a {
+      width: 10.25rem;
+      height: 3.5625rem;
+      border: 1px solid $almostBlack;
+      border-radius: 10px;
+      color: $almostBlack;
+      text-align: center;
+      padding: 15px 30px;
+      font-size: 1.125rem;
+      font-weight: 500;
+      transition: background 0.2s ease, color 0.2s ease;
+      margin-bottom: 1.5rem;
+      @include breakpoint-down(medium) {
+        margin-bottom: 2.5rem;
+        &:hover {
+          background: $almostBlack;
+          color: #fff;
+        }
+      }
+      &:hover {
+        background: $almostBlack;
+        color: #fff;
+      }
+    }
+  }
+  &__clients {
+    width: 35vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint-down(medium) {
+      width: 100%;
+      margin-bottom: 10vh;
+    }
+    img {
+      @include breakpoint-down(medium) {
+        width: 21vw;
+      }
+    }
+    img:nth-child(2) {
+      @include breakpoint-down(medium) {
+        width: 15vw;
+      }
+    }
+    img:nth-child(3) {
+      @include breakpoint-down(medium) {
+        width: 19vw;
+      }
+    }
+    img:nth-child(4) {
+      @include breakpoint-down(medium) {
+        width: 17vw;
+      }
+    }
+  }
+}
